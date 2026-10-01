@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Buntod Community Church | BCC</title>
+
+<meta name="description"
+content="Buntod Community Church — Saving Souls and Making Disciples.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f7f7f7;
+}
+
+header {
+    background: #8b0000;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+        url("church-photo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    font-size: clamp(18px, 3vw, 30px);
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 6px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    background: #c40000;
+    color: white;
+}
+
+.secondary {
+    background: white;
+    color: #8b0000;
+}
+
+section {
+    padding: 75px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #8b0000;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+    color: #666;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    color: #8b0000;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+.history {
+    background: #eee;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    background: white;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-left: 5px solid #8b0000;
+    border-radius: 6px;
+}
+
+.timeline-item h3 {
+    color: #8b0000;
+    margin-bottom: 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+}
+
+.donate {
+    background: #8b0000;
+    color: white;
+    text-align: center;
+}
+
+.donate .section-title {
+    color: white;
+}
+
+.donate p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer strong {
+    color: white;
+}
+
+@media(max-width: 750px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 14px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 260px;
+    }
+
+    section {
+        padding: 55px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            BCC
+            <span>BUNTOD COMMUNITY CHURCH</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#background">Background</a>
+            <a href="#history">History</a>
+            <a href="#gallery">Photos</a>
+            <a href="#donate">Donate</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h1>Buntod Community Church</h1>
+
+        <h2>Saving Souls and Making Disciples</h2>
+
+        <p>
+            Welcome to Buntod Community Church.
+            A community committed to following Jesus Christ,
+            sharing the Gospel, and making disciples.
+        </p>
+
+        <a class="button primary" href="#background">
+            Learn More
+        </a>
+
+        <a class="button secondary" href="#donate">
+            Support Our Ministry
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BACKGROUND ================= -->
+
+<section id="background">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Our Background
+        </h2>
+
+        <p class="section-subtitle">
+            Buntod Community Church exists to proclaim the Gospel
+            of Jesus Christ and help people grow in faith.
+        </p>
+
+        <div class="about-grid">
+
+            <div class="card">
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    Our mission is to share the Good News of Jesus Christ,
+                    lead people to salvation, encourage spiritual growth,
+                    and make disciples who will serve God and others.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    We desire to see individuals, families, and communities
+                    transformed through the Gospel and established in
+                    a growing relationship with Jesus Christ.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Our Purpose</h3>
+
+                <p>
+                    We gather together for worship, fellowship,
+                    Bible teaching, prayer, evangelism, discipleship,
+                    and service to our community.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Our Statement</h3>
+
+                <p>
+                    <strong>
+                    Saving Souls and Making Disciples
+                    </strong>
+                </p>
+
+                <p>
+                    This is the heart of Buntod Community Church.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HISTORY ================= -->
+
+<section id="history" class="history">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Our History
+        </h2>
+
+        <p class="section-subtitle">
+            Every church has a testimony of God's faithfulness.
+            This section can be updated with the official history
+            of Buntod Community Church.
+        </p>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>Our Beginning</h3>
+
+                <p>
+                    Buntod Community Church began with a desire
+                    to reach people with the Gospel and establish
+                    a community of believers centered on Jesus Christ.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Growing in Faith</h3>
+
+                <p>
+                    As the ministry developed, the church continued
+                    to emphasize worship, Bible teaching, prayer,
+                    fellowship, evangelism, and discipleship.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Today</h3>
+
+                <p>
+                    Buntod Community Church continues its mission:
+                    <strong>Saving Souls and Making Disciples.</strong>
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>More History Coming</h3>
+
+                <p>
+                    Send the official founding year, names of founders
+                    or pastors, important milestones, and other
+                    historical information and this section can be
+                    expanded.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PHOTOS ================= -->
+
+<section id="gallery">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Photo Gallery
+        </h2>
+
+        <p class="section-subtitle">
+            Photos from the ministry and church community.
+        </p>
+
+        <div class="gallery">
+
+            <!--
+            Replace these images with your church photos.
+
+            Example:
+
+            <img src="photo1.jpg" alt="Buntod Community Church">
+            -->
+
+            <img src="church-photo.jpg"
+                 alt="Buntod Community Church">
+
+            <img src="church-photo2.jpg"
+                 alt="Buntod Community Church">
+
+            <img src="church-photo3.jpg"
+                 alt="Buntod Community Church">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DONATE ================= -->
+
+<section id="donate" class="donate">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Support the Ministry
+        </h2>
+
+        <p>
+            Your support can help Buntod Community Church
+            continue its ministry, outreach, evangelism,
+            discipleship, and service to the community.
+        </p>
+
+        <!-- PayPal -->
+
+        <a class="button secondary"
+           href="https://www.paypal.com/donate/?business=vincentrada2026%40gmail.com&currency_code=PHP"
+           target="_blank">
+
+            Donate Through PayPal
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact Us
+        </h2>
+
+        <p class="section-subtitle">
+            We would be happy to connect with you.
+        </p>
+
+        <div class="contact-info">
+
+            <p>
+                📞 Phone:
+                <a href="tel:+639557886290">
+                    +63 955 788 6290
+                </a>
+            </p>
+
+            <p>
+                📘 Facebook:
+                <a href="https://www.facebook.com/share/1GdKWMgBJ3/"
+                   target="_blank">
+                    Buntod Community Church
+                </a>
+            </p>
+
+            <p>
+                ✉️ Email:
+                <a href="mailto:vincentrada2026@gmail.com">
+                    vincentrada2026@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>Buntod Community Church</strong>
+    </p>
+
+    <p>
+        Saving Souls and Making Disciples
+    </p>
+
+</footer>
+
+
+</body>
+</html>
